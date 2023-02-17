@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="5QxPV4Ur17b6nb0pkcwyQ70feEtP-cCHEOq2WS8K1Ww" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="./style.css" rel="stylesheet">
+  <link rel="preload" href="https://www.jqueryscript.net/dummy/7.jpg" as="image">
+  <link rel="preload" href="https://www.jqueryscript.net/dummy/8.jpg" as="image">
+  <link rel="preload" href="https://www.jqueryscript.net/dummy/9.jpg" as="image">
+  <!-- <link rel="stylesheet" href="bootstrap-5.1.3/dist/"> -->
+  <link rel="preload" href="https://www.jqueryscript.net/dummy/10.jpg" as="image">
+  <title>Bootstrap 5 Vertical Carousel Example</title>
+  <link rel="icon" type="image/x-icon" href="./images/bootstrap.ico">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.green.css">
+
+  <script src="OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+  <script src="OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital@1&family=Edu+NSW+ACT+Foundation&family=Great+Vibes&family=Lora:ital,wght@1,500&family=Monoton&family=Rye&family=Source+Sans+Pro:ital@1&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Toast notification https://getbootstrap.com/docs/5.1/components/toasts/ -->
+
+
+  <!-- offcanvas start here --> 
+
+  <div class="offcan sticky-top p-3" >
+    <div class="logo d-flex justify-content-between">
+      <img src="./image/logo.jfif" class=" " style="border-radius: 50%;" height="60px" width="60px" alt="">
+      <i class="fa-solid p-3   fs-3  text-white  fa-bars" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasExample"></i>
+    </div>
+
+  </div>
+
+  <div class="offcanvas offcanvas-start w-25 bg-dark " tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title text-white" id="offcanvasExampleLabel"> Ritika</h5>
+
+      <i class="fa-solid fa-xmark text-white fs-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"></i>
+
+      <!-- <button type="button" class="btn-close bg-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+    </div>
+    <div class="offcanvas-body ">
+      <ul class="list-unstyled text-capitalize w-50 m-auto">
+        <li class="  fs-5 nav_box">
+          <a href="" class="text-white"> About Tours </a>
+          <div class="bor">
+          </div>
+        </li>
+        <li class="mt-4 fs-5 nav_box"><a href="" class="text-white"> Our Services </a>
+          <div class="bor">
+          </div>
+        </li>
+        <li class="mt-4 fs-5 nav_box"><a href="" class="text-white"> Hot Tours </a>
+          <div class="bor">
+          </div>
+        </li>
+        <li class="mt-4 fs-5 nav_box"><a href="" class="text-white"> Our Mission </a>
+          <div class="bor">
+          </div>
+        </li>
+    </div>
+  </div>
+
+
+  <!-- end here -->
+  <div class="containerfluid " id="top" style="height: 60vh;">
+    <!-- Carousel https://getbootstrap.com/docs/5.1/components/carousel/ -->
+    <div class="carousel-container">
+
+      <div id="vertical-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false"
+        data-bs-wrap="true">
+        <!-- Carousel slide indicators -->
+        <ol class="carousel-indicators">
+          <li data-bs-target="#vertical-carousel" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#vertical-carousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#vertical-carousel" data-bs-slide-to="2"></li>
+          <li data-bs-target="#vertical-carousel" data-bs-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <!-- Carousel item represents each slide -->
+          <div class="carousel-item active" style="background-image:url(./image/slider-4-slide-1-1920x678.jpg);">
+            <div class="container">
+              <div class="row   align-items-center" style="height: 70vh">
+                <div class="content text-white text-capitalize animate__animated animate__bounce animate__backInUp">
+                  <p class="fs-5 animate__bounceInDown " style="letter-spacing:2px ;">build your dream holiday</p>
+                  <h1 class="display-2  " style="line-height:58px ;"> find you <br> destination </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item  " style="background-image:url(./image/slider-4-slide-2-1920x678.jpg);">
+            <div class="container">
+              <div class="row   align-items-center" style="height: 70vh">
+                <div class="content text-white text-capitalize animate__animated animate__bounce animate__backInDown"
+                  data-aos="fade-left">
+                  <p class="fs-5 animate__bounceInDown" style="letter-spacing:2px ;">build your dream holiday</p>
+                  <h1 class="display-2  " style="line-height:58px ;"> create <b>your <br> tour</b> </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item  " style="background-image:url(./image/slider-4-slide-3-1920x678.jpg);">
+            <div class="container">
+              <div class="row   align-items-center" style="height: 70vh">
+                <div class="content text-white text-capitalize animate__animated animate__bounce animate__backInRight">
+                  <p class="fs-5 animate__bounceInDown" style="letter-spacing:2px ;">enjoy the best destination our
+                    travel agency</p>
+                  <h1 class="display-2  " style="line-height:58px ;"> explore the <br> world </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item  " style="background-image:url(./image/slider-4-slide-2-1920x678.jpg);">
+            <div class="container">
+              <div class="row  align-items-center" style="height: 70vh">
+                <div class="content text-white text-capitalize animate__animated animate__bounce animate__bounceInLeft">
+                  <p class="fs-5" style="letter-spacing:2px ;">a team of professionals travel experts</p>
+                  <h1 class="display-2  " style="line-height:58px ;">trust our <br> experience</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel buttons -->
+    </div>
+  </div>
+
+  <div class="container  d-sm-none d-md-block my_cards ">
+    <div class="card_img">
+      <div class="row justify-content-center">
+        <div class="col-11">
+          <div class="row" data-aos="fade-up">
+            <div class="col-4">
+              <div class="box_img">
+                <img src="./image/cta-1-368x420.jpg" height="auto" width="100%" alt="">
+                <h3>Balloon Flights</h3>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="box_img">
+                <img src="./image/cta-2-368x420.jpg" height="auto" width="100%" alt="">
+                <h3>Balloon Flights</h3>
+
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="box_img">
+                <img src="./image/cta-3-368x420.jpg" height="auto" width="100%" alt="">
+                <h3>Balloon Flights</h3>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="heading text-center text-capitalize   margin" data-aos="fade-up-right">
+    <h3>about Tours</h3>
+    <div class="border_ani"></div>
+  </div>
+
+  <!-- section end here -->
+  <div class="container margin ">
+    <div class="row  mt-5">
+      <div class="col-12 col-md-6" data-aos="fade-right">
+        <img src="./image/index-3-556x382.jpg" height="auto" width="100%" alt="">
+      </div>
+      <div class="col-12 col-md-6  dis sm_tabs" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <h3 data-aos="zoom-in-down">Discover New Horizons</h3>
+        <ul class="nav nav-tabs  " id="myTab" role="tablist">
+          <li class="nav-item p-3   border-bottom border-info mx-2" role="presentation">
+            <button class="nav-link   active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+              role="tab" aria-controls="home" aria-selected="true">about us</button>
+          </li>
+          <li class="nav-item p-3 border-bottom border-info mx-2" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+              role="tab" aria-controls="profile" aria-selected="false">WHY CHOOSE US</button>
+          </li>
+          <li class="nav-item p-3 border-bottom border-info mx-2" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+              role="tab" aria-controls="contact" aria-selected="false">OUR MISSION</button>
+          </li>
+        </ul>
+        <div class="tab-content mb-5  " id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Our mission is to
+            provide the ultimate planning experience while becoming a o planning experience while becoming a o planning
+            experience while becoming a otravel planning experience while becoming a one-stop shop for every travel
+            service
+            available in the industry.</div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Our mission is to
+            provide the ultimate travel planni every trave planning experience while becoming a o planning experience
+            while becoming a ol service available in the industry.</div>
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Our mission is to
+            provide the ultimate travel planning experience while becoming a o planning experience while becoming a
+            one-stop shop for every travel e industry.
+          </div>
+        </div>
+        <button class="">get in touch</button>
+      </div>
+      <div class="col-12 col-md-6 md_tabs mt-5">
+        <div class="d-flex align-items-start    ">
+          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link  " id="v-pills-home-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-home">Home</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-profile">Profile</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-messages">Messages</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-settings">Settings</button>
+          </div>
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home">1 Lorem ipsum d cing elit. Quia doloremque earum
+              amet modi animi, magnam tenetur unde ad commodi laborum!</div>
+            <div class="tab-pane fade" id="v-pills-profile">2 Lorem ipsum dolor sit amet consecte ing elit. Quia
+              doloremque earum amet modi animi, magnam tenetur unde ad commodi laborum!</div>
+            <div class="tab-pane fade" id="v-pills-messages">3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quia doloremque earum amet modi animi, magnam tenetur unde ad commodi laborum!</div>
+            <div class="tab-pane fade" id="v-pills-settings">4 Lorem ipsum dolor sit amet consec elit. Quia doloremque
+              earum amet modi animi, magnam tenetur unde ad commodi laborum!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- vertical nav -->
+
+
+  <div class="container margin">
+    <div class="heading text-center mb-5">
+      <h3>Our Services</h3>
+      <div class="border_ani"></div>
+
+    </div>
+    <div class="row  ">
+      <div class="col-12 col-md-4 " data-aos="zoom-in-right">
+        <div class="row">
+          <div class="col-3  text-end">
+            <img src="image/1.png" height="auto" width="50%" alt="">
+          </div>
+          <div class="col-9">
+            <h3> Personalized Matching</h3>
+            <p>Our unique matching system lets you find just the tour you want for your next holiday.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 " data-aos="fade-down">
+        <div class="row">
+          <div class="col-3  text-end">
+            <img src="image/2.png" height="auto" width="50%" alt="">
+          </div>
+          <div class="col-9">
+            <h3>Wide Variety of Tours</h3>
+            <p>Our unique matching system lets you find just the tour you want for your next holiday.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 " data-aos="zoom-in-left">
+        <div class="row">
+          <div class="col-3  text-end">
+            <img src="image/3.png" height="auto" width="50%" alt="">
+          </div>
+          <div class="col-9">
+            <h3>
+              Highly Qualified Service</h3>
+            <p>Our unique matching system lets you find just the tour you want for your next holiday.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- row 2 -->
+    <div class="row margin">
+      <div class="col-12 col-md-4 " data-aos="zoom-in-right">
+        <div class="row">
+          <div class="col-3 text-end">
+            <img src="image/4.png" height="auto" width="50%" alt="">
+          </div>
+          <div class="col-9">
+            <h3> 24/7 Support</h3>
+            <p>Our unique matching system lets you find just the tour you want for your next holiday.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 " data-aos="fade-down">
+        <div class="row">
+          <div class="col-3 text-end">
+            <img src="image/5.png" height="auto" width="50%" alt="">
+          </div>
+          <div class="col-9">
+            <h3>Handpicked Hotels</h3>
+            <p>Our unique matching system lets you find just the tour you want for your next holiday.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 " data-aos="zoom-in-left">
+        <div class="row">
+          <div class="col-3 text-end">
+            <img src="image/6.png" height="auto" width="50%" alt="">
+          </div>
+          <div class="col-9">
+            <h3>Best Price Guarantee</h3>
+            <p>Our unique matching system lets you find just the tour you want for your next holiday.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="heading text-center  margin">
+    <h3>Hot Tours</h3>
+    <div class="border_ani"></div>
+
+  </div>
+
+  <div class="container ">
+    <div class="row" data-aos="fade-up-right">
+      <div class="col-12">
+        <div class="row border">
+          <div class="col-12 col-md-6 p-0">
+            <div class="bg">
+              <div class="inner_bg"></div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 q p-5 tours position-relative overflow-hidden">
+            <div class="price  ">790$</div>
+            <h3>Benidorm, Spain</h3>
+            <div class="icons">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca,
+              the town is one of the original Spanish beach resorts...
+            </p>
+            <button id="btn">click here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- row2 -->
+    <div class="row mt-5" data-aos="fade-up-left">
+      <div class="col-12">
+        <div class="row border">
+          <div class="col-12 col-md-6  p-0">
+            <div class="bg">
+              <div class="inner_bg2"></div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 p-5 tours position-relative overflow-hidden">
+            <div class="price  ">790$</div>
+            <h3>Benidorm, Spain</h3>
+            <div class="icons">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca,
+              the town is one of the original Spanish beach resorts...
+            </p>
+            <button id="btn">click here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section end here -->
+  <div class="heading text-center  margin">
+    <h3>Different People — One Mission</h3>
+    <div class="border_ani"></div>
+
+  </div>
+  <div class="container margin">
+    <div class="row text-center">
+      <div class="col-12 col-md-3 user_box">
+        <div class="user">
+          <img src="./image/user-1-118x118.jpg" height="100px" width="100px" alt="">
+        </div>
+        <div class="user_con">
+          <h5>Diana Robinson</h5>
+          <small>Founder, Owner</small>
+          <p>+1 323-913-4688</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 user_box">
+        <div class="user">
+          <img src="./image/user-2-118x118.jpg" height="100px" width="100px" alt="">
+        </div>
+        <div class="user_con">
+          <h5>Diana Robinson</h5>
+          <small>Founder, Owner</small>
+          <p>+1 323-913-4688</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 user_box">
+        <div class="user">
+          <img src="./image/user-3-118x118.jpg" height="100px" width="100px" alt="">
+        </div>
+        <div class="user_con">
+          <h5>Diana Robinson</h5>
+          <small>Founder, Owner</small>
+          <p>+1 323-913-4688</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-3 user_box">
+        <div class="user">
+          <img src="./image/user-4-118x118.jpg" height="100px" width="100px" alt="">
+        </div>
+        <div class="user_con">
+          <h5>Diana Robinson</h5>
+          <small>Founder, Owner</small>
+          <p>+1 323-913-4688</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section end here -->
+  <!-- First-class Impressions -->
+  <div class="row align-items-center  text-center" id="fixed_bg">
+    <div class="col-12">
+      <div class="scroll_text">
+        <h3 class=" ">First-class Impressions
+          are Waiting for You!</h3>
+        <p>Our agency offers travelers various tours and excursions with destinations all over the world. Browse our
+          website to find your dream tour!</p>
+        <button id="btn_box"> click here</button>
+      </div>
+    </div>
+  </div>
+  <div class="container margin">
+    <div class="owl-carousel owl-theme margin">
+      <div class="items ">
+        <img src="image/gallery-image-1-270x195.jpg" height="auto" width="100%" alt="">
+
+      </div>
+      <div class="items"><img src="image/gallery-image-2-270x195.jpg" height="auto" width="100%" alt=""></div>
+      <div class="items"><img src="image/gallery-image-5-270x195.jpg" height="auto" width="100%" alt=""></div>
+      <div class="items"><img src="image/gallery-image-7-270x195.jpg" height="auto" width="100%" alt=""></div>
+      <div class="items"><img src="image/gallery-image-5-270x195.jpg" height="auto" width="100%" alt=""></div>
+      <div class="items"><img src="image/gallery-image-6-270x195.jpg" height="auto" width="100%" alt=""></div>
+
+    </div>
+  </div>
+
+
+  <!-- footer -->
+  <footer class="">
+    <div class="container">
+      <div class="row ">
+        <div class="col-12 col-md-3 footer_con">
+          <h6>CONTACT US</h6>
+          <p><a href=""> <i class="fa-solid fa-phone"></i>+1 323-913-4688</a></p>
+          <p><a href=""><i class="fa-solid fa-envelope"></i>info@demolink.org</a></p>
+          <p><a href=""><i class="fa-solid fa-paper-plane"></i>4730 Crystal Springs Dr, Los Angeles, CA 90027</a></p>
+        </div>
+
+        <div class="col-12 col-md-3 footer_con">
+          <h6>POPULAR NEWS</h6>
+          <p><a href="">Your Personal Guide to 5 Best Places to Visit on Earth</a></p>
+          <small class="text-secondary">May 04 2022</small>
+          <p><a href="">Top 10 Hotels: Rating by Wonder Tour Travel Experts</a></p>
+        </div>
+
+        <div class="col-12 col-md-3 footer_con">
+          <h6>QUICK LINKS</h6>
+          <p><a href="">About us</a></p>
+          <p><a href="">Our Tours</a></p>
+          <p><a href="">Our Team</a></p>
+          <p><a href="">Gallery</a></p>
+
+        </div>
+        <div class="col-12 col-md-3 footer_con">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d112068.01759415928!2d76.91948993580904!3d28.625999030476567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.716616199999997!2d77.1139872!4m5!1s0x390d13a9db09a969%3A0x1168ceaec464735f!2sNajafgarh%20Lake%2C%20vill%20dansha%2C%20Ghalibpur%2C%20Delhi%2C%20110073!3m2!1d28.536538399999998!2d76.8726468!5e0!3m2!1sen!2sin!4v1657858795301!5m2!1sen!2sin"
+            width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <div class="inner_footer">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <p id="foot_text">© 2022 reet . All Rights Reserved. Design by ritika </p>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <i class="fa-solid fa-phone  "></i>
+        <i class="fa-solid fa-envelope mx-2"></i>
+        <i class="fa-solid fa-paper-plane mx-2"></i>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- scroll top button -->
+<a href="#top" class="position-fixed bottom-0">
+scroll top
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    $(document).ready(
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 4
+          }
+
+        }
+      })
+    )
+  </script>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="bootstrap-5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="js.js"></script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</body>
+
+</html>
